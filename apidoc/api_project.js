@@ -1,0 +1,1 @@
+define({  "name": "神州区块链API",  "version": "0.1.0",  "description": "神州区块链项目API说明文档。",  "title": "神州区块链API",  "url": "http://10.0.5.217:8080",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-09-19T06:43:10.214Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});
