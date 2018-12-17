@@ -62,7 +62,8 @@
                         "lesson07" : "邱岳的产品手记",
                         "lesson08" : "朱赟的技术管理课",
                         "lesson09" : "如何做好一场演讲",
-                        "lesson10" : "技术管理实战36讲"
+                        "lesson10" : "技术管理实战36讲",
+                        "lesson11" : "从0开始学大数据"
                     })},
                     dataType: "json",
                     success: function(data) {
@@ -77,6 +78,7 @@
                             $("#peopleCount08").text(data.lesson08);
                             $("#peopleCount09").text(data.lesson09);
                             $("#peopleCount10").text(data.lesson10);
+                            $("#peopleCount11").text(data.lesson11);
                         }
                     }
                 });
@@ -123,6 +125,9 @@
                 });
                 $("#lesson10").click(function(){
                     window.location.href="/mobile/plugin/dch/smb/lesson/lesson10.jsp?itcode="+itcode;
+                });
+                $("#lesson11").click(function(){
+                    window.location.href="/mobile/plugin/dch/smb/lesson/lesson11.jsp?itcode="+itcode;
                 });
 
                 $("#technicalExperts").click(function(){
@@ -188,6 +193,18 @@
                 </div>
             </div>
         </div>
+
+        <!-- 精品课程11 -->
+        <div style="width:100%;height: 90px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
+            <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
+                <b style="font-size:18px">从0开始学大数据 </b><br/>
+                <font color="red">付费&nbsp;&nbsp;<img src="./img/newLesson.png" style="width: 50px;height: 35px;margin-top: -3px;"></font><br>
+                <font color="gray">已有 <strong id="peopleCount11"></strong> 人参与学习</font>
+            </div>
+            <div id="lesson11" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:15px">进入课程
+            </div>
+        </div>
+
         <!-- 精品课程01 -->
         <div style="width:100%;height: 95px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
             <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
@@ -297,6 +314,7 @@
             <div id="lesson10" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:15px">进入课程
             </div>
         </div>
+
         <!-- 酒品 -->
         <!-- <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
             <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">

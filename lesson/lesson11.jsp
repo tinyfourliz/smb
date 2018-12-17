@@ -20,7 +20,7 @@
         <meta name="description" content="Weaver E-mobile" />
         <meta name="keywords" content="weaver,e-mobile" />
         <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0" />
-        <title>数据结构与算法之美</title>
+        <title>从0开始学大数据</title>
         <link rel="stylesheet" id="" href="../css/trav.css"/>
         <link rel="stylesheet" id="" href="../css/bootstrap.min.css" type="text/css" />
         <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
@@ -38,7 +38,7 @@
 
         <script type="text/javascript">
         	var itcode = '<%=it_code1 %>';
-            var lessonid = 3;
+            var lessonid = 11;
             var dataArr = [];
 
         	$(function() {
@@ -48,7 +48,7 @@
                         url: "/mobile/plugin/dch/smb/lesson/getLessonInsertItcode.jsp",
                         data: {"jsonStr" : JSON.stringify({
                             "itcode" : itcode,
-                            "lesson" : "数据结构与算法之美",
+                            "lesson" : "从0开始学大数据",
                             "lessonid" : lessonid
                         })},
                         dataType: "json",
@@ -72,7 +72,7 @@
                         }
                     }
                     if (flag == true) {
-                        $(this).attr("href", "./lesson03/" + chapterId + ".html?itcode="+ itcode + "&lessonid=" + lessonid);
+                        $(this).attr("href", "./lesson11/" + chapterId + ".html?itcode="+ itcode + "&lessonid=" + lessonid);
                     } else {
                         $("#waitGif").show();
                         var jsonStr = JSON.stringify({
@@ -89,7 +89,7 @@
                             success: function(data) {
                                 dataArr.push(parseInt(chapterId));
                                 $("#waitGif").hide();
-                                window.location.href="./lesson03/" + chapterId + ".html?itcode="+ itcode + "&lessonid=" + lessonid;
+                                window.location.href="./lesson11/" + chapterId + ".html?itcode="+ itcode + "&lessonid=" + lessonid;
                             }
                         });
                     }
@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-12" align="center" style="margin-top: 5%;">
                     <div>
-                        <p style="font-size: 120%;text-align: center;font-weight: bold;">数据结构与算法之美<br><font style="font-size: 85%;color: red;">按章节收费，每章 2 SZB</font></p>
+                        <p style="font-size: 120%;text-align: center;font-weight: bold;">从0开始学大数据<br><font style="font-size: 80%;color: red;">按章节收费，每章 2 SZB</font></p>
                     </div>
                     <div>
                         <nav class="navbar navbar-default" role="navigation">
@@ -123,12 +123,12 @@
                             </div>
                             <div class="collapse navbar-collapse" id="navbar-collapse0">
                                 <ul class="nav navbar-nav">
-                                    <li><a id="00">开篇词 | 从今天起，跨过“数据结构与算法”这道坎</a></li>
-                                    <li><a id="01">01 | 为什么要学习数据结构与算法</a></li>
-                                    <li><a id="02">02 | 如何抓住重点，系统高效地学习数据结构与算法</a></li>
-                                    <li><a id="03">03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗</a></li>
-                                    <li><a id="04">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</a></li>
-                                    <li><a id="05">05 | 数组：为什么很多编程语言中数组都从0开始编号</a></li>
+                                    <li><a id="00">开篇词 | 为什么说每个软件工程师都应该懂大数据技术</a></li>
+                                    <li><a id="01">01 | 大数据技术发展史：大数据的前世今生</a></li>
+                                    <li><a id="02">02 | 大数据应用发展史：从搜索引擎到人工智能</a></li>
+                                    <li><a id="03">03 | 大数据应用领域：数据驱动一切</a></li>
+                                    <li><a id="04">04 | 移动计算比移动数据更划算</a></li>
+                                    <li><a id="05">05 | 从RAID看垂直伸缩到水平伸缩的演化</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -147,11 +147,11 @@
                             </div>
                             <div class="collapse navbar-collapse" id="navbar-collapse1">
                                 <ul class="nav navbar-nav">
-                                    <li><a id="06">06 | 链表（上）：如何实现LRU缓存淘汰算法</a></li>
-                                    <li><a id="07">07 | 链表（下）：如何轻松写出正确的链表代码</a></li>
-                                    <li><a id="08">08 | 栈：如何实现浏览器的前进和后退功能</a></li>
-                                    <li><a id="09">09 | 队列：队列在线程池等有限资源池中的应用</a></li>
-                                    <li><a id="10">10 | 递归：如何用三行代码找到“最终推荐人”</a></li>
+                                    <li><a id="06">06 | 新技术层出不穷，HDFS依然是存储的王者</a></li>
+                                    <li><a id="07">07 | 为什么说MapReduce既是编程模型又是计算框架</a></li>
+                                    <li><a id="08">08 | MapReduce如何让数据完成一次旅行</a></li>
+                                    <li><a id="09">09 | 为什么我们管Yarn叫作资源调度框架</a></li>
+                                    <li><a id="10">10 | 模块答疑：我们能从Hadoop学到什么</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -170,11 +170,11 @@
                             </div>
                             <div class="collapse navbar-collapse" id="navbar-collapse2">
                                 <ul class="nav navbar-nav">
-                                    <li><a id="11">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎</a></li>
-                                    <li><a id="12">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素</a></li>
-                                    <li><a id="13">13 | 线性排序：如何根据年龄给100万用户数据排序</a></li>
-                                    <li><a id="14">14 | 排序优化：如何实现一个通用的、高性能的排序函数</a></li>
-                                    <li><a id="15">15 | 二分查找（上）：如何用最省内存的方式实现快速查找功能</a></li>
+                                    <li><a id="11">11 | Hive是如何让MapReduce实现SQL操作的</a></li>
+                                    <li><a id="12">12 | 我们并没有觉得MapReduce速度慢，知道Spark出现</a></li>
+                                    <li><a id="13">13 | 同样的本质，为何Spark可以更高效</a></li>
+                                    <li><a id="14">14 | BigTable的开源实现：HBase</a></li>
+                                    <li><a id="15">15 | 流式计算的代表：Storm、Flink、Spark Streaming</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -193,57 +193,11 @@
                             </div>
                             <div class="collapse navbar-collapse" id="navbar-collapse3">
                                 <ul class="nav navbar-nav">
-                                    <li><a id="16">16 | 二分查找（下）：如何快速定位IP对应的省份地址</a></li>
-                                    <li><a id="17">17 | 跳表：为什么Redis一定要用跳表来实现有序集合</a></li>
-                                    <li><a id="18">18 | 散列表（上）：Word文档中的单词拼写检查功能是如何实现的</a></li>
-                                    <li><a id="19">19 | 散列表（中）：如何打造一个工业级水平的散列表</a></li>
-                                    <li><a id="20">20 | 散列表（下）：为什么散列表和连表经常会一起使用</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <div>
-                        <nav class="navbar navbar-default" role="navigation">
-                            <div class="navbar-header" align="center">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                        data-target="#navbar-collapse4">
-                                    <span class="sr-only"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand">第 21 - 25 讲</a>
-                            </div>
-                            <div class="collapse navbar-collapse" id="navbar-collapse4">
-                                <ul class="nav navbar-nav">
-                                    <li><a id="21">21 | 哈希算法（上）：如何防止数据库中的用户信息被脱库</a></li>
-                                    <li><a id="22">22 | 哈希算法（下）：哈希算法在分布式系统中有哪些应用</a></li>
-                                    <li><a id="23">23 | 二叉树基础（上）：什么样的二叉树适合用数组来存储</a></li>
-                                    <li><a id="24">24 | 二叉树基础（下）：有了如此搞高效的散列表，为什么还需要二叉树</a></li>
-                                    <li><a id="25">25 | 红黑树（上）：为什么工程中都用红黑树这种二叉树</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <div>
-                        <nav class="navbar navbar-default" role="navigation">
-                            <div class="navbar-header" align="center">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                        data-target="#navbar-collapse5">
-                                    <span class="sr-only"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand">第 26 - 30 讲</a>
-                            </div>
-                            <div class="collapse navbar-collapse" id="navbar-collapse5">
-                                <ul class="nav navbar-nav">
-                                    <li><a id="26">26 | 红黑树（下）：掌握这些技巧，你也可以实现一个红黑树</a></li>
-                                    <li><a id="27">27 | 递归树：如何借助树来求解递归算法的时间复杂度</a></li>
-                                    <!-- <li><a id="28">28 | 堆和堆排序：为什么说堆排序没有快速排序快</a></li>
-                                    <li><a id="29">29 | </a></li>
-                                    <li><a id="30">30 | </a></li> -->
+                                    <li><a id="16">16 | ZooKeeper是如何保证数据一致性的</a></li>
+                                    <li><a id="17">17 | 模块答疑：这么多技术，到底都能用在什么场景里</a></li>
+                                    <!-- <li><a id="18">18 | 同样的本质，为何Spark可以更高效</a></li>
+                                    <li><a id="19">19 | BigTable的开源实现：HBase</a></li>
+                                    <li><a id="20">20 | 流式计算的代表：Storm、Flink、Spark Streaming</a></li> -->
                                 </ul>
                             </div>
                         </nav>
