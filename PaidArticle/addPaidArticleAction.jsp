@@ -13,7 +13,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String jsonStr = Util.null2String((String) f_uu.getParameter("jsonStr"));
 	HttpRequest httpRequest = new HttpRequest();
-	String url = "http://10.0.5.218:8082/paidRead/insertArticle";
+	String url = "http://10.0.3.113:8082/paidRead/insertArticle";
 	try{
 		String s = URLEncoder.encode(jsonStr,"utf-8");
 		String result = httpRequest.sendPost(url, "param=" + s);

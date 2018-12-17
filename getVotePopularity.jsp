@@ -8,6 +8,6 @@
 	FileUpload fu9 = new FileUpload(request);
 	String voteID = Util.null2String((String) fu9.getParameter("voteID"));
 	HttpUrlService hus = new HttpUrlService();
-	String status = hus.doHttpUrlNet("http://10.0.5.218:8082/vote/topic/" + voteID, null, "GET");
+	String status = hus.doHttpUrlNet("http://10.0.3.113:8082/vote/topic/" + voteID, null, "GET");
 	response.getWriter().print(status);
 %>

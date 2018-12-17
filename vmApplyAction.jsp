@@ -15,7 +15,7 @@
 	sdata.put("machineid",machineid);
 	sdata.put("itcode",it_code1);
 
-	String root="http://10.7.10.124:8080/vm/apply";
+	String root="http://10.0.3.112:8080/vm/apply";
 	// BaseBean bb=new BaseBean();
 	// bb.writelog
 	HttpUrlService service44 = new HttpUrlService();

@@ -13,7 +13,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String jsonStr = Util.null2String((String) f_uu.getParameter("jsonStr"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.0.5.218:8082/vote/topic/add?param=";
+	String url = "http://10.0.3.113:8082/vote/topic/add?param=";
 	// String url = "http://10.7.10.186:8082/vote/topic/add?param=";
 	// String url1 = "http://172.16.3.142:8080/vote/topic/add?param=";
 	try{

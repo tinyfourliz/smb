@@ -9,6 +9,6 @@
 	String account = Util.null2String((String) fu9.getParameter("account"));
 	String topicID = Util.null2String((String) fu9.getParameter("topicID"));
 	HttpUrlService hus = new HttpUrlService();
-	String status = hus.doHttpUrlNet("http://10.0.5.218:8082/vote/todayStatus?account=" + account + "&topicID=" + topicID, null, "GET");
+	String status = hus.doHttpUrlNet("http://10.0.3.113:8082/vote/todayStatus?account=" + account + "&topicID=" + topicID, null, "GET");
 	response.getWriter().print(status);
 %>

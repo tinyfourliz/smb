@@ -8,7 +8,7 @@
 	String code = user.getLoginid();
 	
 	HttpUrlService service = new HttpUrlService();
-	String result = service.doHttpUrlNet("http://10.7.10.124:8080/vm/myVms?itcode=" + code, null, "GET");
+	String result = service.doHttpUrlNet("http://10.0.3.112:8080/vm/myVms?itcode=" + code, null, "GET");
 %>
 <!DOCTYPE html>
 <html>

@@ -11,7 +11,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.0.5.218:8082/paidRead/selectArticleByHot";
+	String url = "http://10.0.3.113:8082/paidRead/selectArticleByHot";
 	String result = httpService.doHttpUrlNet(url,null, "GET");
 	out.print(result);
 %>

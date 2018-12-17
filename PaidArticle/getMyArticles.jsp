@@ -14,7 +14,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String itcode = Util.null2String((String) f_uu.getParameter("itcode"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.0.5.218:8082/paidRead/queryMine";
+	String url = "http://10.0.3.113:8082/paidRead/queryMine";
 	String result = httpService.doHttpUrlNet(url+"?itcode="+itcode,null, "GET");
 	out.print(result);
 %>

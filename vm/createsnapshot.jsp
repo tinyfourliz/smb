@@ -26,7 +26,7 @@
                String vmid =Util.null2String(fu.getParameter("vmid").trim());
                System.out.println("======================"+vmid);
               HttpUrlService service3 = new HttpUrlService();
-	String status =  service3.doHttpUrlNet("http://10.7.10.124:8080/vm/getCreatesnapshot?vmid="+vmid,null,"GET");
+	String status =  service3.doHttpUrlNet("http://10.0.3.112:8080/vm/getCreatesnapshot?vmid="+vmid,null,"GET");
               out.print(status);
 	
  %>
