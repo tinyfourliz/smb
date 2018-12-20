@@ -22,7 +22,7 @@
 <%
            request.setCharacterEncoding("UTF-8");
               HttpUrlService service3 = new HttpUrlService();
-	String status =  service3.doHttpUrlNet("http://10.7.10.124:8080/vm/getUsedCount",null,"GET");
+	String status =  service3.doHttpUrlNet("http://10.0.3.112:8080/vm/getUsedCount",null,"GET");
               out.print(status);
 	
  %>

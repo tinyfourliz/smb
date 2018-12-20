@@ -240,8 +240,8 @@
                             <div class="collapse navbar-collapse" id="navbar-collapse5">
                                 <ul class="nav navbar-nav">
                                     <li><a id="26">26 | 红黑树（下）：掌握这些技巧，你也可以实现一个红黑树</a></li>
-                                    <!-- <li><a id="27">27 | </a></li>
-                                    <li><a id="28">28 | </a></li>
+                                    <li><a id="27">27 | 递归树：如何借助树来求解递归算法的时间复杂度</a></li>
+                                    <!-- <li><a id="28">28 | 堆和堆排序：为什么说堆排序没有快速排序快</a></li>
                                     <li><a id="29">29 | </a></li>
                                     <li><a id="30">30 | </a></li> -->
                                 </ul>

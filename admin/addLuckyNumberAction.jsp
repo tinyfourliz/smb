@@ -13,7 +13,7 @@
 	FileUpload f_uu1 = new FileUpload(request);
 	String jsonStr = Util.null2String((String) f_uu1.getParameter("jsonStr"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.0.5.218:8082/signinReward/addLuckyNumber?param=";
+	String url = "http://10.0.3.113:8082/signinReward/addLuckyNumber?param=";
 	try{
 		String s = URLEncoder.encode(jsonStr,"utf-8");
 		Encrypt encrypt = new EncryptImpl();

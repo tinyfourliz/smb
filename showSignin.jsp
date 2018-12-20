@@ -84,7 +84,7 @@
 	var infoData;
     var detailData;
     var boughtCount;
-    var lotteryId = 12;
+    var lotteryId = 13;
 
 	//true已签到，false未签到
 	var signinFlag = true;

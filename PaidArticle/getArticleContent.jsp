@@ -14,7 +14,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String id = Util.null2String((String) f_uu.getParameter("id"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.0.5.218:8082/paidRead/selectContent";
+	String url = "http://10.0.3.113:8082/paidRead/selectContent";
 	String result = httpService.doHttpUrlNet(url+"?id="+id,null, "GET");
 	out.print(result);
 %>

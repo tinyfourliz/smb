@@ -14,7 +14,7 @@
 	HttpUrlService httpService = new HttpUrlService();
 	String itcode = Util.null2String((String) f_uu.getParameter("itcode"));
 	String topicId = Util.null2String((String) f_uu.getParameter("topicId"));
-	String url = "http://10.0.5.218:8082/paidVotes/getDetail?itcode="+itcode+"&topicId="+topicId;
+	String url = "http://10.0.3.113:8082/paidVotes/getDetail?itcode="+itcode+"&topicId="+topicId;
 	String result = httpService.doHttpUrlNet(url,null, "GET");
 	out.print(result);
 %>

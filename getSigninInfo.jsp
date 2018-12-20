@@ -9,6 +9,6 @@
 	String it_code = Util.null2String((String) fu9.getParameter("itcode"));
 
 	HttpUrlService hus = new HttpUrlService();
-	String status = hus.doHttpUrlNet("http://10.0.5.218:8082/signinReward/saveRandom?itcode=" + it_code, null, "GET");
+	String status = hus.doHttpUrlNet("http://10.0.3.113:8082/signinReward/saveRandom?itcode=" + it_code, null, "GET");
 	response.getWriter().print(status);
 %>

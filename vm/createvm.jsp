@@ -35,7 +35,7 @@
            String hasnet =Util.null2String(fu.getParameter("hasnet").trim());
                   
               HttpUrlService service3 = new HttpUrlService();
-	String status =  service3.doHttpUrlNet("http://10.7.10.124:8080/vm/apply?usetime="+usetime+"&itcode="+code+"&os="
+	String status =  service3.doHttpUrlNet("http://10.0.3.112:8080/vm/apply?usetime="+usetime+"&itcode="+code+"&os="
 	+os+"&memory="+memory+"&cpu="+cpu+"&harddisk="+harddisk+"&email="+email+"&hasnet="+hasnet,null,"GET");
               out.print(status);
 	

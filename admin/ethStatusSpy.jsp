@@ -66,8 +66,11 @@
                 $("#yanzhi-man").click(function() {
                     window.location.href="/mobile/plugin/dch/smb/vote/paidVote/yanzhi-man.jsp?itcode="+itcode;
                 });*/
-                $("#article").click(function() {
+                $("#nodes").click(function() {
                     window.location.href="/mobile/plugin/dch/smb/admin/ethNodesCheck.jsp?itcode="+itcode;
+                });
+                $("#contract").click(function() {
+                    window.location.href="/mobile/plugin/dch/smb/admin/contractBalanceCheck.jsp?itcode="+itcode;
                 });
             });
         </script>
@@ -76,7 +79,8 @@
     	 <div class="container" style="">
             <div class="row">
                 <div class="col-xs-12 col-md-12" align="center" style="margin-top: 5%;">
-                    <button id="article" type="button" class="btn btn-default btn-lg btn-block" style="vertical-align: middle;"><!-- <img src="./img/newLesson.png" style="width: 25px;height: 25px;float: left;"> -->节点监测</button>
+                    <button id="nodes" type="button" class="btn btn-default btn-lg btn-block" style="vertical-align: middle;"><!-- <img src="./img/newLesson.png" style="width: 25px;height: 25px;float: left;"> -->节点监测</button>
+                    <button id="contract" type="button" class="btn btn-default btn-lg btn-block" style="vertical-align: middle;"><!-- <img src="./img/newLesson.png" style="width: 25px;height: 25px;float: left;"> -->合约余额监测</button>
                    <!--  <button id="apply" type="button" class="btn btn-default btn-lg btn-block" style="vertical-align: middle;"><img src="./img/applyButtonIcon.png" style="width: 25px;height: 25px;float: left;">申请投票话题</button>
                     <button id="laomo" type="button" class="btn btn-default btn-lg btn-block" style="vertical-align: middle;"><img src="./img/lmButtonIcon.png" style="width: 25px;height: 25px;float: left;">劳模排行榜</button>
                     <button id="xuexi" type="button" class="btn btn-default btn-lg btn-block" style="margin-top: 10px;"><img src="./img/xxButtonIcon.png" style="width: 25px;height: 25px;float: left;">学习排行榜</button>

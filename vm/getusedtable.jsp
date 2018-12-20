@@ -7,7 +7,7 @@
 	String code = user.getLoginid();
 
 	HttpUrlService service = new HttpUrlService();
-	String result = service.doHttpUrlNet("http://10.7.10.124:8080/vm/allUsableVms?pageNum=500&pageSize=500", null, "GET");
+	String result = service.doHttpUrlNet("http://10.0.3.112:8080/vm/allUsableVms?pageNum=500&pageSize=500", null, "GET");
 %>
 <!DOCTYPE html>
 <html>
