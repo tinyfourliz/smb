@@ -90,7 +90,7 @@
 	var developerItcodeList = ["fannl","fengshuo1","lizhe1","zhoujingb","alexshen","mojja","zhangyangac"];
 	var adminItcodeList = ["fannl","lizhe1","zhoujingb","alexshen","mojja","zhangyangac","fengshuo1"];
 	$(function(){
-		// $("#noticeModal").modal('show');
+		$("#noticeModal").modal('show');
 		var accountKey = '<%=accountKey %>';
 		
 		if(isInArray(developerItcodeList,itcode)){

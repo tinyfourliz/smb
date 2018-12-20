@@ -403,7 +403,7 @@
                         var htmlStr = "";
                         for(var index = 0; index < detailTemp.length; index++) {
                             var ticket = detailTemp[index].backup3 == 0 ? "生成中" : detailTemp[index].ticket;
-                            htmlStr += "<tr><td id='tdTime' style='word-break: break-all;text-align: center;'>"+detailTemp[index].buyTime+"</td><td id='tdTicket' style='word-break: break-all;text-align: center;'>"+ticket+"</td></tr>";
+                            htmlStr += "<tr><td id='tdTime' style='word-break: break-all;text-align: center;'>"+detailTemp[index].backup2+"</td><td id='tdTicket' style='word-break: break-all;text-align: center;'>"+ticket+"</td></tr>";
                         }
                         $("#modalTbody").html(htmlStr);
                         $("#transactionModal").modal('show');
