@@ -42,10 +42,9 @@
                         <h3 class="display-3" style="color:#FF0000">神州币夺宝</h3>
                     </div>
                     <div>
-                        <p class="lead" style="font-weight: bold;">该活动夺宝码及中奖码由特殊算法计算生成，保证公平，童叟无欺，您可放心购买。</p>
-                    </div><br>
-                    <div>
-                        <p class="lead" style="font-weight: bold;">用户可以使用神州币购买夺宝码，数量有限，购完即止。</p>
+                        <p class="lead" style="font-weight: bold;">夺宝玩法所有交易记录于区块链上，安全透明。</p>
+                        <p class="lead" style="font-weight: bold;">开奖算法基于区块链交易hash计算，公平公正。</p>
+                        <p class="lead" style="font-weight: bold;">使用神州币购买夺宝码，数量有限，购满即开。</p>
                         <img src="../img/lottery_01.png" class="img-rounded img-responsive center-block" style="border-bottom: groove;">
                     </div><br>
                     <div>

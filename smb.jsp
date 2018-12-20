@@ -341,6 +341,7 @@
 
 		<div id="dowork" style="margin:10px 0px 10px 0px;height:50px;line-height:50px;font-size:20px">
 			<img src="img/zuorenwu.png" style="margin-left:10px;width:50px;height:50px;float:left" >&nbsp;&nbsp;&nbsp;福利
+			<img src="img/chapterUpdated.png" style="width: 50px;height: 20px;margin-top: -3px;">
 			<img src="img/1.png" style="float:right;width:30px;height:30px;margin-top:10px" >
 		</div>
 		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;">
@@ -360,7 +361,6 @@
 		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;">
 		<div id="paihangbang" style="margin:10px 0px 10px 0px;height:50px;line-height:50px;font-size:20px">
 			<img src="img/paihangbang.png" style="margin-left:10px;width:50px;height:50px;float:left" >&nbsp;&nbsp;&nbsp;排行榜
-			<img src="img/chapterUpdated.png" style="width: 50px;height: 20px;margin-top: -3px;">
 			<img src="img/1.png" style="float:right;width:30px;height:30px;margin-top:10px" >
 		</div>
 		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;">
@@ -451,7 +451,7 @@
                  		 	<caption style="text-align: center;font-size: 150%;color: #3B3B3B;">夺宝玩法上线</caption>
                             <tbody>
                                 <tr>
-                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>福利-神州币夺宝</code><br>丰富奖品等您来拿<br><code style="font-size: 115%;">虚拟机快照</code><br>工作进度随时备份<br>
+                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>福利-神州币夺宝</code><br>每天9:30-10:00开启<br>丰富奖品等您来拿<br><code style="font-size: 115%;">虚拟机快照</code><br>工作进度随时备份<br>
                                   	<!-- <code style="font-size: 95%;">已上线</code> -->
                                   </td>
                                 </tr>
