@@ -448,14 +448,16 @@
                     </div> -->
                     <div class="modal-body" style='word-break: break-all;'>
                  		 <table class="table table-condensed" style="table-layout: fixed;">
-                 		 	<caption style="text-align: center;font-size: 150%;color: #3B3B3B;">消费大放价</caption>
+                 		 	<caption style="text-align: center;font-size: 150%;color: #3B3B3B;">夺宝玩法上线</caption>
                             <tbody>
                                 <tr>
-                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>虚拟机申请</code><br>一周75神州币<br><code style="font-size: 115%;">精品课程</code><br>趣谈网络协议<br><code style="font-size: 95%;">已上线</code></td>
+                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>福利-神州币夺宝</code><br>丰富奖品等您来拿<br><code style="font-size: 115%;">虚拟机快照</code><br>工作进度随时备份<br>
+                                  	<!-- <code style="font-size: 95%;">已上线</code> -->
+                                  </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                   <td style="text-align: center;"><br>心动不如行动<br>抓紧时间抢购吧</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
