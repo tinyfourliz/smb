@@ -317,8 +317,8 @@
             <div id="lesson10" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:15px">进入课程
             </div>
         </div>
-
-        <div style="width:100%;height: 90px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
+        
+     <!--<div style="width:100%;height: 90px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
             <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
                 <b style="font-size:18px">神州币夺宝 </b><br/>
             </div>
@@ -326,6 +326,7 @@
             </div>
         </div>
 
+        </div> -->
         <!-- 酒品 -->
         <!-- <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
             <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
