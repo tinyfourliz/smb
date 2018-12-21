@@ -14,7 +14,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String jsonStr = Util.null2String((String) f_uu.getParameter("jsonStr"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.7.10.87:8082/ethAccount/balanceQuery?param=";
+	String url = "http://10.0.3.113:8082/ethAccount/balanceQuery?param=";
 	try{
 		String s = URLEncoder.encode(jsonStr,"utf-8");
 		Encrypt encrypt = new EncryptImpl();

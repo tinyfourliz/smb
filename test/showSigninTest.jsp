@@ -84,7 +84,7 @@
 	var infoData;
     var detailData;
     var boughtCount;
-    var lotteryId = 12;
+    var lotteryId = 16;
 
 	//true已签到，false未签到
 	var signinFlag = true;
@@ -322,10 +322,13 @@
                     
                     //判断是否参与
                     var innerHtml = "";
-                    if (boughtCount > 0) {
-                        innerHtml = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
-                                    +"<a onClick='viewTicket()'>查看夺宝号 </a>"
-                                    +"<button id='btnBuy' type='button' onClick='buyClick()' class='btn btn-default btn-xs' style='float: right; margin-right: 15px;'>继续购买</button>";
+                    if (boughtCount > 0 && infoData.limitEveryday == 1) {
+                    	innerHtml = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+                                                +"<a style='float: right; margin-right: 15px;' onClick='viewTicket()'>查看夺宝号 </a>";
+                    } else if(boughtCount > 0 && infoData.limitEveryday > 1) {
+                    	innerHtml = "<font style='float: left; margin-left: 20px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+                                                +"<a onClick='viewTicket()'>查看夺宝号 </a>"
+                                                +"<button id='btnBuy' type='button' class='btn btn-default btn-xs' style='float: right; margin-right: 20px;' onClick='buyClick()'>继续购买</button>";
                     } else {
                         innerHtml = "<button type='button' class='btn btn-info btn-sm' onClick='buyClick()'>立即抢购</button>";
                     }
@@ -351,7 +354,6 @@
             } else{
                 $.ajax({
                     type: "GET",
-                    async:false,
                     url: "/mobile/plugin/dch/smb/test/getLotteryStatus.jsp",
                     data: {"jsonStr" : JSON.stringify({
                         "lotteryId" : infoData.id
@@ -392,10 +394,16 @@
                             }
                             alert("正在生成夺宝码，请稍后查看");
                             boughtCount += 1;
-                            var htmlStr = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+                            var htmlStr = "";
+                            if(infoData.limitEveryday == 1) {
+                            	htmlStr = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+                                                    +"<a style='float: right; margin-right: 15px;' onClick='viewTicket()'>查看夺宝号 </a>";
+                            } else {
+                            	htmlStr = "<font style='float: left; margin-left: 20px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
                                                     +"<a onClick='viewTicket()'>查看夺宝号 </a>"
-                                                    +"<button id='btnBuy' type='button' class='btn btn-default btn-xs' style='float: right; margin-right: 15px;' onClick='buyClick()'>继续购买</button>";
-                             $("#divBottom").html(htmlStr);
+                                                    +"<button id='btnBuy' type='button' class='btn btn-default btn-xs' style='float: right; margin-right: 20px;' onClick='buyClick()'>继续购买</button>";
+                            }
+                            $("#divBottom").html(htmlStr);
 
                             var nowAmount = parseInt($("#divProgress").attr("aria-valuenow"))+10;
                             changeProgress(nowAmount);

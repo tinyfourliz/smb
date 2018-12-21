@@ -14,7 +14,7 @@
 	FileUpload f_uu = new FileUpload(request);
 	String jsonStr = Util.null2String((String) f_uu.getParameter("jsonStr"));
 	HttpUrlService httpService = new HttpUrlService();
-	String url = "http://10.7.10.186:8082/paidLottery/selectLotteryInfo?param=";
+	String url = "http://10.0.3.113:8082/paidLottery/selectLotteryInfo?param=";
 	// String url = "http://10.127.7.136:8082/lessons/insertItcode?param=";
 	try{
 		String s = URLEncoder.encode(jsonStr,"utf-8");
