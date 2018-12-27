@@ -62,6 +62,9 @@
                 $("#newSmbTest").click(function(){
                     window.location.href="/mobile/plugin/dch/smbTest/smb.jsp?itcode="+itcode;
                 });
+                $("#lotteryTest").click(function(){
+                    window.location.href="/mobile/plugin/dch/smb/test/lotteryPage.jsp?itcode="+itcode;
+                });
         	})
         </script>
     </head>
@@ -83,7 +86,7 @@
                 <div id="enterAMTest" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:7px">进入
                 </div>
             </div>
-            <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
+  <!--           <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
                 <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
                     <b style="font-size:20px">从0开始学架构</b><br/>
                     <font color="gray">从0开始学架构测试</font>
@@ -114,7 +117,7 @@
                 </div>
                 <div id="topicShowTest" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:7px">进入
                 </div>
-            </div>
+            </div> -->
             <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
                 <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
                     <b style="font-size:20px">付费文章</b><br/>
@@ -129,6 +132,14 @@
                     <font color="gray">重构测试</font>
                 </div>
                 <div id="newSmbTest" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:7px">进入
+                </div>
+            </div>
+             <div style="width:100%;height: 72px;border-bottom:1px solid grey;margin:0 auto;padding: 10px;background: #C0C0BB;">
+                <div style="width:70%;margin:0;padding-left:10px;height:100%;float:left">
+                    <b style="font-size:20px">夺宝页面</b><br/>
+                    <font color="gray">夺宝页面测试</font>
+                </div>
+                <div id="lotteryTest" style="float:right;height:40px;line-height:40px;font-size:18px;border:1px solid white;background:#2C84f8;width:100px;text-align:center;border-radius:10px;color:white;margin-top:7px">进入
                 </div>
             </div>
     	</div>
