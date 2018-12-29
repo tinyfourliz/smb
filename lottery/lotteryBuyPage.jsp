@@ -43,6 +43,7 @@
         <script type="text/javascript" src="../js/aui_script/aui-tab.js" ></script>
         <script type="text/javascript" src="../js/aui_script/aui-pull-refresh.js"></script>
         <script type="text/javascript" src="../js/aui_script/aui-toast.js" ></script>
+        <script type="text/javascript" src="../js/aui_script/aui-dialog.js" ></script>
         <script type="text/javascript">
             var itcode = '<%=it_code1 %>';
             var id = '<%=id_ %>';
@@ -96,7 +97,7 @@
                 //发送请求，获取此次夺宝信息，查看该用户是否参与此次夺宝，若参与，展示夺宝号码
                 $.ajax({
                     type: "GET",
-                    url: "/mobile/plugin/dch/smb/test/getLotteryInfo.jsp",
+                    url: "/mobile/plugin/dch/smb/lottery/getLotteryInfo.jsp",
                     data: {"jsonStr" : JSON.stringify({
                         "itcode" : itcode,
                         "id" : id
@@ -143,6 +144,42 @@
                         }
                     }
                 });
+
+                if(itcode == "fannl" || itcode == "lizhe1" || itcode == "mojja") {
+                    $("#fannlManager").show();
+                }
+
+                window.fannl = function() {
+                    var dialog = new auiDialog();
+                    dialog.prompt({
+                    title:"reward修改",
+                    text:infoData.reward,
+                    type:'number',
+                    buttons:['取消','修改']
+                    },function(ret){
+                        if(ret.buttonIndex == 2){
+                            dialog.alert({
+                                title:"提示",
+                                msg: "正在修改reward为："+ret.text,
+                                buttons:['确定']
+                            });
+                        }
+                        $.ajax({
+                            type: "GET",
+                            url: "/mobile/plugin/dch/smb/lottery/getUpdateReward.jsp",
+                            data: {"jsonStr" : JSON.stringify({
+                                "id" : infoData.id,
+                                "reward" : ret.text
+                            })},
+                            dataType: "json",
+                            success: function(data) {
+                                if (data.success) {
+                                    alert("修改成功！");
+                                }
+                            }
+                        })
+                    })
+                }
 
                 //点击购买按钮
                 window.buyClick = function() {
@@ -222,7 +259,7 @@
                 window.viewTicket = function() {
                     $.ajax({
                         type: "GET",
-                        url: "/mobile/plugin/dch/smb/test/getLotteryInfo.jsp",
+                        url: "/mobile/plugin/dch/smb/lottery/getLotteryInfo.jsp",
                         data: {"jsonStr" : JSON.stringify({
                             "itcode" : itcode,
                             "id" : id
@@ -312,6 +349,9 @@
                         <div id="divBottom" style="margin-top: 5px; margin-bottom: 5px;height: 30px;vertical-align: middle;">
                         </div>
                     </div>
+                </div>
+                <div id="fannlManager" hidden="hidden" align="center">
+                    <button type='button' class='btn btn-default btn-sm' onclick="fannl()">管理</button>
                 </div>
                 <div id="divWait" class="col-xs-12 col-md-12" align="center" style="position: fixed;left: 50%;top: 50%;transform: translateX(-50%)translateY(-50%);-webkit-transform:translateX(-50%) translateY(-50%);">
                     <img id="waitGif" src="../img/walletWait.gif" hidden="hidden">

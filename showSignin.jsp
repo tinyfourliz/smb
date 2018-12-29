@@ -84,7 +84,7 @@
 	var infoData;
     var detailData;
     var boughtCount;
-    var lotteryId = 15;
+    var lotteryId;
 
 	//true已签到，false未签到
 	var signinFlag = true;
@@ -179,7 +179,6 @@
 				data:{itcode:itcode},
 				dataType:"json",
 				success:function(data){
-					console.log(data);
 					if(data.status == 1){
 						$.ajax({
 							url:"/mobile/plugin/dch/smb/getRewards.jsp",
@@ -293,51 +292,65 @@
             $("#divProgress").attr("style","width: "+ valueNow/valueMax*100 +"%;");
         }
 
-        //发送请求，获取此次夺宝信息，查看该用户是否参与此次夺宝，若参与，展示夺宝号码
         $.ajax({
             type: "GET",
-            url: "/mobile/plugin/dch/smb/getLotteryInfo.jsp",
+            url: "/mobile/plugin/dch/smb/getCurrentSMBLotteryId.jsp",
             data: {"jsonStr" : JSON.stringify({
                 "itcode" : itcode,
-                "id" : lotteryId
             })},
             dataType: "json",
             success: function(data) {
                 if (data.success) {
-                    infoData = data.infoData;
-                    detailData = data.detailData;
-                    boughtCount = detailData.length;
-                    $("#fontReword").text(infoData.description);
-                    $("#strOnce").text(infoData.unitPrice);
-                    $("#strLimit").text(infoData.limitEveryday);
-                    $("#strHaved").text(infoData.nowSumAmount);
-                    // $("#strSum").text(infoData.winSumAmount);
-                    // $("#strRest").text(infoData.winSumAmount - infoData.nowSumAmount);
-                    $("#divProgress").attr("aria-valuemax",infoData.winSumAmount);
-                    changeProgress(infoData.nowSumAmount);
-                    //已开奖
-                    if(infoData.flag == 1) {
-                        var htmlStr = "<a onClick='viewResult()'>查看结果</a>";
-                        $("#divBottom").html(htmlStr);
-                        return;
-                    }
-                    
-                    //判断是否参与
-                    var innerHtml = "";
-                    if (boughtCount > 0 && infoData.limitEveryday == 1) {
-                    	innerHtml = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
-                                                +"<a style='float: right; margin-right: 15px;' onClick='viewTicket()'>查看夺宝号 </a>";
-                    } else if(boughtCount > 0 && infoData.limitEveryday > 1) {
-                    	innerHtml = "<font style='float: left; margin-left: 20px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
-                                                +"<a onClick='viewTicket()'>查看夺宝号 </a>"
-                                                +"<button id='btnBuy' type='button' class='btn btn-default btn-xs' style='float: right; margin-right: 20px;' onClick='buyClick()'>继续购买</button>";
-                    } else {
-                        innerHtml = "<button type='button' class='btn btn-info btn-sm' onClick='buyClick()'>立即抢购</button>";
-                    }
-                    $("#divBottom").html(innerHtml);
+                	lotteryId = data.data;
+                	//发送请求，获取此次夺宝信息，查看该用户是否参与此次夺宝，若参与，展示夺宝号码
+			        $.ajax({
+			            type: "GET",
+			            url: "/mobile/plugin/dch/smb/getLotteryInfo.jsp",
+			            data: {"jsonStr" : JSON.stringify({
+			                "itcode" : itcode,
+			                "id" : data.data
+			            })},
+			            dataType: "json",
+			            success: function(data) {
+			                if (data.success) {
+			                    infoData = data.infoData;
+			                    detailData = data.detailData;
+			                    boughtCount = detailData.length;
+			                    $("#fontReword").text(infoData.description);
+			                    $("#strOnce").text(infoData.unitPrice);
+			                    $("#strLimit").text(infoData.limitEveryday);
+			                    $("#strHaved").text(infoData.nowSumAmount);
+			                    // $("#strSum").text(infoData.winSumAmount);
+			                    // $("#strRest").text(infoData.winSumAmount - infoData.nowSumAmount);
+			                    $("#divProgress").attr("aria-valuemax",infoData.winSumAmount);
+			                    changeProgress(infoData.nowSumAmount);
+			                    //已开奖
+			                    if(infoData.flag == 1) {
+			                        var htmlStr = "<a onClick='viewResult()'>查看结果</a>";
+			                        $("#divBottom").html(htmlStr);
+			                        return;
+			                    }
+			                    
+			                    //判断是否参与
+			                    var innerHtml = "";
+			                    if (boughtCount > 0 && infoData.limitEveryday == 1) {
+			                    	innerHtml = "<font style='float: left; margin-left: 15px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+			                                                +"<a style='float: right; margin-right: 15px;' onClick='viewTicket()'>查看夺宝号 </a>";
+			                    } else if(boughtCount > 0 && infoData.limitEveryday > 1) {
+			                    	innerHtml = "<font style='float: left; margin-left: 20px;'>已购买&nbsp;<strong>" + boughtCount + "</strong>&nbsp;次</font>"
+			                                                +"<a onClick='viewTicket()'>查看夺宝号 </a>"
+			                                                +"<button id='btnBuy' type='button' class='btn btn-default btn-xs' style='float: right; margin-right: 20px;' onClick='buyClick()'>继续购买</button>";
+			                    } else {
+			                        innerHtml = "<button type='button' class='btn btn-info btn-sm' onClick='buyClick()'>立即抢购</button>";
+			                    }
+			                    $("#divBottom").html(innerHtml);
+			                }
+			            }
+			        });
                 }
             }
         });
+
 
         window.reloadPage = function() {
         	location.reload();
@@ -444,7 +457,6 @@
 
         //查看结果
         window.viewResult =function() {	
-        	console.log("查看结果");
             var numberArr = infoData.winTicket.split("&");
             var winnerArr = infoData.winner.split("&");
             var htmlStr1 = "";
@@ -483,7 +495,6 @@
                 htmlStr3 += "<tr><td id='tdTime' style='word-break: break-all;text-align: center;'>恭喜您中奖，红包码为：<strong style='color:red;'>" + rewordStr +"</strong>请在支付宝中搜索领取。</td></tr>";
             }
 
-            console.log("zheli");
             $("#modalResult").html(htmlStr1);
             $("#modalMine").html(htmlStr2);
             $("#modalHongbao").html(htmlStr3);

@@ -139,6 +139,12 @@
    		$("#dowork").click(function(){
 			window.location.href="/mobile/plugin/dch/smb/showSignin.jsp?accountKey="+accountKey+"&itcode="+itcode;
    		});
+
+   		// 夺宝
+   		$("#lottery").click(function(){
+			window.location.href="/mobile/plugin/dch/smb/lottery/lotteryPage.jsp?accountKey="+accountKey+"&itcode="+itcode;
+   		});
+
    		// 充值
    		$("#wallet").click(function(){
 			// window.location.href="/mobile/plugin/dch/smb/showCharge.jsp?accountKey="+accountKey+"&itcode="+itcode;
@@ -340,8 +346,14 @@
 		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;"> -->
 
 		<div id="dowork" style="margin:10px 0px 10px 0px;height:50px;line-height:50px;font-size:20px">
-			<img src="img/zuorenwu.png" style="margin-left:10px;width:50px;height:50px;float:left" >&nbsp;&nbsp;&nbsp;福利
-			<img src="img/chapterUpdated.png" style="width: 50px;height: 20px;margin-top: -3px;">
+			<img src="img/fuli.png" style="margin-left:10px;width:50px;height:50px;float:left" >&nbsp;&nbsp;&nbsp;福利
+			<!-- <img src="img/chapterUpdated.png" style="width: 50px;height: 20px;margin-top: -3px;"> -->
+			<img src="img/1.png" style="float:right;width:30px;height:30px;margin-top:10px" >
+		</div>
+		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;">
+		<div id="lottery" style="margin:10px 0px 10px 0px;height:50px;line-height:50px;font-size:20px">
+			<img src="img/zuorenwu.png" style="margin-left:10px;width:50px;height:50px;float:left" >&nbsp;&nbsp;&nbsp;夺宝
+			<img src="img/zuixinshangxian.png" style="width: 50px;height: 40px;margin-top: 12px;">
 			<img src="img/1.png" style="float:right;width:30px;height:30px;margin-top:10px" >
 		</div>
 		<hr class="hh" style="font-size: 0px;padding: 0;margin: 0;">
@@ -451,7 +463,7 @@
                  		 	<caption style="text-align: center;font-size: 150%;color: #3B3B3B;">夺宝玩法上线</caption>
                             <tbody>
                                 <tr>
-                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>福利-神州币夺宝</code><br>每天9:30-10:00开启<br>丰富奖品等您来拿<br><code style="font-size: 115%;">虚拟机快照</code><br>工作进度随时备份<br>
+                                  <td style="text-align: center;"><code style="font-size: 115%;"><br>神州币夺宝</code><br>现金红包每天9:30-10:00开启<br>海量神州币、丰富奖品<br>等您来拿<br><code style="font-size: 115%;">虚拟机快照</code><br>工作进度随时备份<br>
                                   	<!-- <code style="font-size: 95%;">已上线</code> -->
                                   </td>
                                 </tr>
